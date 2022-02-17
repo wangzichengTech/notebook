@@ -1,3 +1,7 @@
+
+
+
+
 1、基本概念
 
 ### 1.1、前言
@@ -252,10 +256,6 @@ Tomcat 实际上运行JSP 页面和Servlet。Tomcat最新版本为**9.0。**
 
 tomcat官网：http://tomcat.apache.org/
 
-![1567825600842](JavaWeb.assets/1567825600842.png)
-
-![1567825627138](JavaWeb.assets/1567825627138.png)
-
 
 
 ### 3.2、Tomcat启动和配置
@@ -274,11 +274,11 @@ tomcat官网：http://tomcat.apache.org/
 
 文件夹作用：
 
-![1567825763180](JavaWeb.assets/1567825763180.png)
+![image-20220126235845835](C:\Users\10130\AppData\Roaming\Typora\typora-user-images\image-20220126235845835.png)
 
 **启动。关闭Tomcat**
 
-![1567825840657](JavaWeb.assets/1567825840657.png)
+![image-20220126235909771](C:\Users\10130\AppData\Roaming\Typora\typora-user-images\image-20220126235909771.png)
 
 访问测试：http://localhost:8080/
 
@@ -290,7 +290,7 @@ tomcat官网：http://tomcat.apache.org/
 
 ### 3.3、配置
 
-![1567825967256](JavaWeb.assets/1567825967256.png)
+![image-20220126235947496](C:\Users\10130\AppData\Roaming\Typora\typora-user-images\image-20220126235947496.png)
 
 可以配置启动的端口号
 
@@ -329,7 +329,7 @@ tomcat官网：http://tomcat.apache.org/
 
    2. 没有：去DNS服务器找，找到的话就返回，找不到就返回找不到；
 
-   <img src="JavaWeb.assets/1567827057913.png" alt="1567827057913" style="zoom: 67%;" />
+   ![image-20220127000210718](C:\Users\10130\AppData\Roaming\Typora\typora-user-images\image-20220127000210718.png)
 
 4. 可以配置一下环境变量（可选性）
 
@@ -372,6 +372,16 @@ Servlet 入门
 - Servlet配置
 - 原理
 
+### 3.5、关于tomcat
+
+tomcat和servlet在网络中的位置：
+
+![image-20220127001422512](C:\Users\10130\AppData\Roaming\Typora\typora-user-images\image-20220127001422512.png)
+
+浏览器访问web的流程图：
+
+![image-20220127001927098](C:\Users\10130\AppData\Roaming\Typora\typora-user-images\image-20220127001927098.png)
+
 
 
 ## 4、Http
@@ -392,13 +402,14 @@ Https：安全的
 
 - http1.0
 
-  - HTTP/1.0：客户端可以与web服务器连接后，只能获得一个web资源，断开连接
+  - HTTP/1.0：客户端可以与web服务器连接后，**只能获得一个web资源**，短连接，获取资源后就断开连接
   - HTTP1.0定义了三种请求方法： GET, POST 和 HEAD方法。
 
 - http2.0
 
-  - HTTP/1.1：客户端可以与web服务器连接后，可以获得多个web资源。
-- HTTP1.1新增了五种请求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法。
+  - HTTP/1.1：客户端可以与web服务器连接后，**可以获得多个web资源**，保持连接。
+  
+  - HTTP1.1新增了五种请求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法。
   
   
 
@@ -437,7 +448,7 @@ Connection:keep-alive
   
     - 请求能够携带的参数比较少，大小==有限制==，会在浏览器的URL地址栏显示数据内容，==不安全，但高效==
     - GET是最简单的HTTP方法，
-    - 4其主要任务就是要求服务器获得一个资源并把资源发回来，
+    - 其主要任务就是要求服务器获得一个资源并把资源发回来，
     - 请求参数在请求行中用？号和URL区别开，所以所带的参数有限，显示在浏览器的地址栏中。
     - GET请求网址http://localhost:8080/FirstWeb/test?userName=Jack&age=20
     - GET 请求可被缓存
@@ -851,13 +862,12 @@ maven由于他的约定大于配置，我们之后可以能遇到我们写的配
 
 ### 6.1、Servlet简介
 
-- Servlet就是sun公司开发动态web的一门技术
+- Servlet就是sun公司开发动态web的一门技术，为了能够实现聊天，发帖这样的一些交互功能
+- Servlet由服务器调用，运行在服务器端
 - Sun在这些API中提供一个接口叫做：Servlet，如果你想开发一个Servlet程序，只需要完成两个小步骤：
   - 编写一个类，实现Servlet接口
   - 把开发好的Java类部署到web服务器中。
-
 - **把实现了Servlet接口的Java程序叫做，Servlet**
-- 
 
 ### 6.2、HelloServlet
 
