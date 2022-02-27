@@ -644,11 +644,6 @@ public class RestFulController {
 - 可以使用原生的request转发或者response重定向
 - 推荐使用SpringMvc的`return “forward:xxx”/"redirect:xxx"`
 
-#### 重定向和转发
-
-- 可以使用原生的request转发或者response重定向
-- 推荐使用SpringMvc的`return “forward:xxx”/"redirect:xxx"`
-
 ```java
 @Controller
 public class ModelTest1 {
